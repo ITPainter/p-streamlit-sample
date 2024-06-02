@@ -8,7 +8,7 @@ st.set_page_config(page_title="Data Viewer", page_icon=":bar_chart:", layout="wi
 @st.cache
 def load_data():
     try:
-        data = pd.read_csv('data.csv')
+        data = pd.read_csv('./data.csv')
         return data
     except FileNotFoundError:
         st.error("CSV file not found. Please upload the correct file.")
